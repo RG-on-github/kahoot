@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAHOOT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bricolage+Grotesque&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="p2.css">
+</head>
+
+<body>
+    <audio id="myAudio" src="correct.mp3"></audio>
+    <audio id="myAudio1" src="failed.mp3"></audio>
+    <section class="page" id="PG1">
+        <header id="hd1">
+            <h1>WELCOME TO THE QUIZ</h1>
+        </header>
+        <div class="question">
+            <p>Q.1) Who is the father of Computers?</p>
+        </div>
+        <div class="options">
+            <button class="bt1" id="btA" onclick="wrong()">A) James Gosling</button>
+            <button class="bt1" id="btB" onclick="right()">B) Charles Babbage</button>
+            <button class="bt1" id="btC" onclick="wrong()">C) Dennis Ritchie</button>
+            <button class="bt1" id="btD" onclick="wrong()">D) Bjarne Stroustrup</button>
+        </div>
+    </section>
+
+    <div class="nxt" id="nxt1">
+        <button onclick="(document.getElementById('PG1').style.display='none') && (document.getElementById('PG2').style.display='block') && (document.getElementById('nxt1').style.display='none') && (document.getElementById('nxt2').style.display='block') && (pg_changed())">NEXT</button>
+    </div>
+
+    <section class="page" id="PG2">
+        <div class="question" id="question2">
+            <p>Q.2) What does HTML stand for?</p>
+        </div>
+        <div class="options" id="options2">
+            <button class="bt1" id="btA" onclick="wrong()">A) Hyper Transfer Markup Language</button>
+            <button class="bt1" id="btB" onclick="wrong()">B) Hyper Text Makeup Language</button>
+            <button class="bt1" id="btC" onclick="right()">C) Hyper Text Markup Language</button>
+            <button class="bt1" id="btD" onclick="wrong()">D) Hyperlink and Text Markup Language</button>
+        </div>
+    </section>
+
+    <div class="nxt" id="nxt2">
+        <button onclick="nxt_pg3()">NEXT</button>
+    </div>
+
+    <section class="page" id="PG3">
+        <div class="question" id="question2">
+            <p>Q.3) Which of the following is a dynamically typed programming language?</p>
+        </div>
+        <div class="options" id="options2">
+            <button class="bt1" id="btA" onclick="right()">A) Python</button>
+            <button class="bt1" id="btB" onclick="wrong()">B) Java</button>
+            <button class="bt1" id="btC" onclick="wrong()">C) C++</button>
+            <button class="bt1" id="btD" onclick="wrong()">D) C#</button>
+        </div>
+    </section>
+
+    <div class="nxt" id="end">
+        <button onclick="end()">END</button>
+    </div>
+
+    <div id="score">
+        <span id="score1"></span>
+    </div>
+
+    <div id="right">
+        <span>CORRECT ANSWER</span>
+    </div>
+    <div id="wrong">
+        <span>WRONG ANSWER</span>
+    </div>
+    <script src="p2.js"></script>
+</body>
+
+</html>
